@@ -10,7 +10,7 @@ const webpackConfig = {
   target: 'web',
 
   entry: {
-    app: path.resolve('src/index.js'),
+    app: path.resolve('client/index.js'),
   },
 
   module: {
@@ -37,7 +37,7 @@ const webpackConfig = {
 
   resolve: {
     modules: [
-      path.resolve('src'),
+      path.resolve('client'),
       'node_modules',
     ],
     extensions: ['.js', '.jsx'],

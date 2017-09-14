@@ -11,6 +11,8 @@ import { Container } from 'semantic-ui-react'
 import TopBar from './components/layout/TopBar/'
 import SideBar from './components/layout/SideBar/'
 import Home from './components/views/Home/'
+import Page1 from './components/views/Page1/'
+import Page2 from './components/views/Page2/'
 import style from './style'
 
 const baseUrl = '/app'
@@ -36,6 +38,8 @@ class App extends Component {
               <Container style={style.content}>
                 <SideBar />
                 <Route exact path="/" component={Home} />
+                <Route exact path="/page1" component={Page1} />
+                <Route exact path="/page2" component={Page2} />
               </Container>
             </div>
           }

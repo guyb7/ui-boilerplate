@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import createStore from './store/create-store'
 
 import Layout from './components/Layout'
 
 class App extends Component {
   render() {
-    return <Layout />
+    return (
+      <Provider store={ this.props.store }>
+        <Layout />
+      </Provider>
+    )
   }
 }
 
-render(<App />, document.getElementById('root'))
+const store = createStore()
+render(<App store={store} />, document.getElementById('root'))

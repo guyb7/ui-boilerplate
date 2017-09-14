@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import { Container } from 'semantic-ui-react'
 import TopBar from './TopBar/'
@@ -13,6 +14,7 @@ class Layout extends Component {
         <Container style={style.container}>
           <SideBar />
           <div style={style.content}>
+            <h1>{this.props.title.title}</h1>
             Main content
           </div>
         </Container>
@@ -21,4 +23,8 @@ class Layout extends Component {
   }
 }
 
-export default Layout
+export default connect(
+  state => ({
+    title: state.title
+  })
+)(Layout)

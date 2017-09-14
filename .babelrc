@@ -5,6 +5,7 @@
     "stage-1"
   ],
   "plugins": [
+    "transform-runtime",
     [ "lodash",
       {
         "id": [ "lodash", "semantic-ui-react" ]

@@ -29,12 +29,12 @@ class TopBar extends Component {
     switch (this.props.location.pathname) {
       case '/page1':
         items = [
-          { key: 'home', name: 'Back Home', onClick: () => {this.changePage('/', true)} }
+          { key: 'home', name: '← Back Home', onClick: () => {this.changePage('/', true)} }
         ]
         break
       case '/page2':
         items = [
-          { key: 'home', name: 'Back Home', onClick: () => {this.changePage('/', true)} }
+          { key: 'home', name: '← Back Home', onClick: () => {this.changePage('/', true)} }
         ]
         break
       default:

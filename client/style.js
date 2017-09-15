@@ -1,14 +1,18 @@
-import { grey100 } from './style/colors'
+import { boxShadow } from './style/'
+import { grey300 } from './style/colors'
 
 export default {
   container: {
-    height: '100%',
-    backgroundColor: grey100
+    backgroundColor: grey300
   },
-  content: {
-    height: '100%',
+  contentContainer: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: '#fff',
+    boxShadow
+  },
+  content: {
+    width: '100%'
   }
 }

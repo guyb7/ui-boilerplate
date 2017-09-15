@@ -1,14 +1,25 @@
-import { blueGrey100 } from '../../../style/colors'
+import { grey100, grey700, grey900 } from '../../../style/colors'
 
 export default {
   menu: {
-    backgroundColor: blueGrey100,
-    borderTop: 0,
-    borderBottom: 0,
+    backgroundColor: grey100,
+    border: 0,
     borderRadius: 0,
     height: '100%',
     width: 200,
     margin: 0
   },
-  menuItem: {}
+  mainMenuItem: {
+    height: 49
+  },
+  menuItem: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    color: grey700,
+    borderRadius: 0
+  },
+  menuItemActive: {
+    color: grey900,
+  }
 }

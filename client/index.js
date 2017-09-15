@@ -10,6 +10,7 @@ import createStore from './store/create-store'
 import { Container } from 'semantic-ui-react'
 import TopBar from './components/layout/TopBar/'
 import SideBar from './components/layout/SideBar/'
+import PageHeader from './components/layout/PageHeader/'
 import Home from './components/views/Home/'
 import Page1 from './components/views/Page1/'
 import Page2 from './components/views/Page2/'
@@ -35,11 +36,14 @@ class App extends Component {
             this.isLoggedIn() &&
             <div style={style.container}>
               <TopBar />
-              <Container style={style.content}>
+              <Container style={style.contentContainer}>
                 <SideBar />
-                <Route exact path="/" component={Home} />
-                <Route exact path="/page1" component={Page1} />
-                <Route exact path="/page2" component={Page2} />
+                <div style={style.content}>
+                  <PageHeader />
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/page1" component={Page1} />
+                  <Route exact path="/page2" component={Page2} />
+                </div>
               </Container>
             </div>
           }

@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import * as actions from '../../../store/action-creators'
 
 import style from './style'
 
 class Home extends Component {
+  componentDidMount() {
+    this.props.dispatch(actions.setTitle('Home'))
+  }
+
   render() {
     return (
       <div style={style.container}>
-        <h1>{this.props.title}</h1>
         Home Page
       </div>
     )
   }
 }
 
-export default connect(
-  state => ({
-    title: state.title.title
-  })
-)(Home)
+export default connect()(Home)

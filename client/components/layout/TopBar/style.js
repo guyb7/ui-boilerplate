@@ -1,4 +1,4 @@
-import { blueGrey800 } from '../../../style/colors'
+import { blueGrey100, blueGrey700, blueGrey800 } from '../../../style/colors'
 
 export default {
   container: {
@@ -16,6 +16,12 @@ export default {
     boxShadow: 'none'
   },
   menuItem: {
-    color: '#fff'
+    color: '#fff',
+    padding: 0
+  },
+  userDropdown: {
+    backgroundColor: blueGrey700,
+    color: blueGrey100,
+    fontSize: 12,
   }
 }

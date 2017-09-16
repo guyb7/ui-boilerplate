@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Icon, Menu } from 'semantic-ui-react'
+import { Container, Dropdown, Icon, Menu } from 'semantic-ui-react'
 
 import Logo from '../Logo'
 import style from './style'
@@ -15,7 +15,15 @@ class TopBar extends Component {
             </Menu.Item>
             <Menu.Menu position='right'>
               <Menu.Item name='menu' style={style.menuItem}>
-                <Icon name='bars' />
+                <Dropdown text='Rick Sanchez' icon='user' labeled button className='icon' style={style.userDropdown}>
+                  <Dropdown.Menu>
+                    <Dropdown.Item>Profile</Dropdown.Item>
+                    <Dropdown.Item>Notifications</Dropdown.Item>
+                    <Dropdown.Item>Settings</Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item>Logout</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </Menu.Item>
             </Menu.Menu>
           </Menu>

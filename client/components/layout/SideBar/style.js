@@ -3,11 +3,14 @@ import { grey100, grey700, grey900 } from '../../../style/colors'
 export default {
   menu: {
     backgroundColor: grey100,
-    border: 0,
+    borderTop: 0,
+    borderBottom: 0,
+    borderLeft: 0,
+    borderRightColor: 'rgba(34,36,38,.15)',
     borderRadius: 0,
-    height: '100%',
     width: 200,
-    margin: 0
+    margin: 0,
+    boxShadow: 'none'
   },
   mainMenuItem: {
     height: 49

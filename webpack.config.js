@@ -18,7 +18,28 @@ const webpackConfig = {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
-    }],
+    }, {
+      test: /\.css$/,
+      use: [
+        { loader: 'style-loader' },
+        {
+          loader: 'css-loader',
+          options: {
+            modules: false
+          }
+        }
+      ]
+    }, {
+      test: /\.(png|jpg|gif|eot|svg|ttf|woff|woff2)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            outputPath: '/static/'
+          }
+        }
+      ]
+    }]
   },
 
   plugins: [
@@ -32,7 +53,6 @@ const webpackConfig = {
   output: {
     filename: 'app.js',
     path: path.resolve('dist'),
-    publicPath: '/',
   },
 
   resolve: {

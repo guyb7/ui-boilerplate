@@ -6,6 +6,7 @@ import {
   Route
 } from 'react-router-dom'
 import createStore from './store/create-store'
+import 'semantic-ui-css/semantic.min.css'
 
 import { Container } from 'semantic-ui-react'
 import TopBar from './components/layout/TopBar/'

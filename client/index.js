@@ -1,23 +1,11 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch
-} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import createStore from './store/create-store'
 import 'semantic-ui-css/semantic.min.css'
 
-import { Container } from 'semantic-ui-react'
-import TopBar from './components/layout/TopBar/'
-import SideBar from './components/layout/SideBar/'
-import PageHeader from './components/layout/PageHeader/'
-import Footer from './components/layout/Footer/'
-import Home from './components/views/Home/'
-import Page1 from './components/views/Page1/'
-import Page2 from './components/views/Page2/'
-import NotFound from './components/views/NotFound/'
+import Layout from './components/Layout'
 import style from './style'
 
 const baseUrl = '/app'
@@ -38,22 +26,7 @@ class App extends Component {
           <div style={style.container}>
           {
             this.isLoggedIn() &&
-            <div style={style.container}>
-              <TopBar />
-              <Container style={style.contentContainer}>
-                <SideBar />
-                <div style={style.content}>
-                  <PageHeader />
-                  <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/page1" component={Page1} />
-                    <Route exact path="/page2" component={Page2} />
-                    <Route component={NotFound} />
-                  </Switch>
-                </div>
-              </Container>
-              <Footer />
-            </div>
+            <Layout />
           }
           {
             this.isLoggedOut() &&

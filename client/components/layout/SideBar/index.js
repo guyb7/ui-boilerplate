@@ -42,7 +42,7 @@ class TopBar extends Component {
         { key: 'empty', disabled: true, name: '' },
         { key: 'home', active: true, name: 'Home', onClick: () => {this.changePage('/')} },
         { key: 'page1', name: 'Page 1', onClick: () => {this.changePage('/page1')} },
-        { key: 'page2', name: 'Page 2', onClick: () => {this.changePage('/page2')} }
+        { key: 'page2', name: 'No sidenav', onClick: () => {this.changePage('/page2')} }
       ]
     }
     const styledItems = items.map(i => ({

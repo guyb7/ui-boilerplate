@@ -15,11 +15,13 @@ yarn install
 
 ## Development
 1. Run `yarn start:dev`
-2. Open (localhost:3020)[http://localhost:3020]
-3. Edit the files in `src` and refresh the page
+2. Open [localhost:3020](http://localhost:3020)
+3. Edit the files in `client/` and refresh the page
 
 When you add your own repo, make sure to create a new remote:
-`git remote add origin https://github.com/user/repo.git`
+```
+git remote add origin https://github.com/user/repo.git
+```
 
 ## Merge with newest version
 ```

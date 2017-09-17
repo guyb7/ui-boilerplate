@@ -3,7 +3,8 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom'
 import createStore from './store/create-store'
 import 'semantic-ui-css/semantic.min.css'
@@ -16,6 +17,7 @@ import Footer from './components/layout/Footer/'
 import Home from './components/views/Home/'
 import Page1 from './components/views/Page1/'
 import Page2 from './components/views/Page2/'
+import NotFound from './components/views/NotFound/'
 import style from './style'
 
 const baseUrl = '/app'
@@ -42,9 +44,12 @@ class App extends Component {
                 <SideBar />
                 <div style={style.content}>
                   <PageHeader />
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/page1" component={Page1} />
-                  <Route exact path="/page2" component={Page2} />
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/page1" component={Page1} />
+                    <Route exact path="/page2" component={Page2} />
+                    <Route component={NotFound} />
+                  </Switch>
                 </div>
               </Container>
               <Footer />
